@@ -8,33 +8,20 @@ To write a program to implement the Decision Tree Regressor Model for Predicting
 2. Anaconda – Python 3.7 Installation / Jupyter notebook
 
 ## Algorithm
-1.Load the dataset Salary.csv using pandas and view the first few rows.
 
-2.Check dataset information and identify any missing values.
-
-3.Encode the categorical column "Position" into numerical values using LabelEncoder.
-
-4.Define feature variables x as "Position" and "Level", and target variable y as "Salary".
-
-5.Split the dataset into training and testing sets using an 80-20 split.
-
-6.Create a DecisionTreeRegressor model instance.
-
-7.Train the model using the training data.
-
-8.Predict the salary values using the test data.
-
-9.Evaluate the model using Mean Squared Error (MSE) and R² Score.
-
-10.Use the trained model to predict salary for a new input [5, 6].
+   1.Import the libraries and read the data frame using pandas.
+   2.Calculate the null values present in the dataset and apply label encoder.
+   3. Determine test and training data set and apply decison tree regression in dataset.
+   4.Calculate Mean square error,data prediction and r2.
 
 ## Program:
 ```
 /*
 Program to implement the Decision Tree Regressor Model for Predicting the Salary of the Employee.
-Developed by: Abdul kalaam k m
-RegisterNumber:  212223230003
-*/
+Developed by: K M Abdul kalaam 
+RegisterNumber: 212223230003
+
+
 import pandas as pd
 data=pd.read_csv("Salary.csv")
 data.head()
@@ -49,8 +36,6 @@ data["Position"]=le.fit_transform(data["Position"])
 data.head()
 
 x=data[["Position","Level"]]
-x.head()
-
 y=data[["Salary"]]
 
 from sklearn.model_selection import train_test_split
@@ -70,24 +55,24 @@ r2
 
 dt.predict([[5,6]])
 
+ 
+*/
 ```
 
 ## Output:
-### Reading of dataset
-![Screenshot 2025-04-27 123508](https://github.com/user-attachments/assets/095fa384-ca6b-4b5e-b494-61d47dda17ae)
-### Value of df.head()
-![Screenshot 2025-04-27 123309](https://github.com/user-attachments/assets/93155c59-f9bd-409a-be09-17164fe3dd00)
+![image](https://github.com/user-attachments/assets/7dc67364-a97a-4bfb-96e7-5b76020a0b07)
 
-###  Value of df.isnull().sum()
-![Screenshot 2025-04-27 123253](https://github.com/user-attachments/assets/c045fc3b-d400-4d52-b692-dad1b9fc72c6)
-### df.info()
-![Screenshot 2025-04-27 123258](https://github.com/user-attachments/assets/838e022f-a851-4365-9517-0f661420a18c)
-### Data after encoding calculating Mean Squared Error
-![Screenshot 2025-04-27 123319](https://github.com/user-attachments/assets/03efd50f-7da7-4be8-b8bd-d129199f29de)
-### R2 value
-![Screenshot 2025-04-27 123324](https://github.com/user-attachments/assets/591470ae-bdb6-4fe9-a79c-1a1a4e69f8c7)
-### Model prediction with [5,6] as input
-![Screenshot 2025-04-27 123515](https://github.com/user-attachments/assets/ed22526b-502d-48da-97d8-f2233b084d1a)
+![image](https://github.com/user-attachments/assets/734639be-0944-4f76-83e8-34fc1402d869)
+
+![image](https://github.com/user-attachments/assets/0a44a29e-da0d-4743-aacd-900703ac4799)
+
+![image](https://github.com/user-attachments/assets/aaee0ce2-03d3-460f-8061-491553dfea17)
+
+![image](https://github.com/user-attachments/assets/14087411-234b-4fbb-8f7d-a6f5449b4ac0)
+
+![image](https://github.com/user-attachments/assets/8a88bbef-38d2-4c4d-a6c0-b768f59ced75)
+
+![image](https://github.com/user-attachments/assets/e5e94585-5829-4092-9dc9-6308b6c0c1f9)
 
 
 
